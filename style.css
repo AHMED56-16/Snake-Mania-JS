@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C2FFC7;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.scoreBox, .highScoreBox {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #62825D;
+    top: 10px;
+}
+
+.scoreBox {
+    right: 5%;
+}
+
+.highScoreBox {
+    right: 5%;
+    top: 50px;
+}
+
+#gameArea {
+    background: linear-gradient(to bottom, #9EDF9C, #62825D);
+    width: 90vmin;
+    height: 90vmin;
+    border: 2px solid #526E48;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.snakeHead {
+    background: linear-gradient(red, yellow);
+    border-radius: 50%;
+}
+
+.snake {
+    background-color: #526E48;
+    border-radius: 50%;
+}
+
+.snakeFood {
+    background-color: #FFEB3B;
+    border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+    .scoreBox, .highScoreBox {
+        font-size: 1.5rem;
+        right: 7%; 
+    }
+
+    .scoreBox {
+        top: 10px;
+    }
+
+    .highScoreBox {
+        top: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .scoreBox, .highScoreBox {
+        font-size: 1.2rem;
+        right: 5%; 
+    }
+
+    .scoreBox {
+        top: 5px;
+    }
+
+    .highScoreBox {
+        top: 40px;
+    }
+
+    #gameArea {
+        width: 80vmin;
+        height: 80vmin;
+    }
+}
+
